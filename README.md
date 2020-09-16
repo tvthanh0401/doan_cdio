@@ -1,4 +1,3 @@
-doan_cdio
 -Cài đặt các gói cần thiết `pip install -r requirements.txt`
 
 -Migration `python manage.py makemigrations`
