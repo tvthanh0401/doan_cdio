@@ -1,6 +1,10 @@
 doan_cdio
 -Cài đặt các gói cần thiết `pip install -r requirements.txt`
-- Migration `python manage.py makemigrations`
+
+-Migration `python manage.py makemigrations`
+
 -Migrate Database `python manage.py migrate`
--Create Super User `python manage.py createsuperuser`
--Finally Run The Project `python manage.py runserver`
+
+-Tạo tài khoản admin `python manage.py createsuperuser`
+
+-Khởi chạy đồ án `python manage.py runserver`
