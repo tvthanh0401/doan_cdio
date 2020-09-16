@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class="ui form" method="POST" action="">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="field">
+        <label>{{ field.name }}</label> {{ field }}
+    </div>
+    {% endfor %}
+    <button class="ui button" type="submit">Register</button>
+</form>
+<div class="ui compact message">
+    <p>Already have an acount? Please <a class="item" href="{% url 'login' %}">login</a>.</p>
+</div>
+{% if messages %}
+    <div class="ui error message">
+        <div class="header">
+            Please check following information:
+        </div>
+        <ul class="list">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+{% endblock %}

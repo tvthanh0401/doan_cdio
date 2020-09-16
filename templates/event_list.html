@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="ui header"> Danh sách event: </h1>
+{% for event in completed %}
+    <label class="ui green label">Đã hoàn thành</label> {{ event.get_html_url|safe }} <br>
+{% endfor %}
+
+{% for event in upcoming %}
+    <label class="ui yellow label">Sắp tiến hành</label> {{ event.get_html_url|safe }} <br>
+{% endfor %}
+
+{% for event in missed %}
+    <label class="ui red label">Trễ hạn</label>{{ event.get_html_url|safe }}<br>
+{% endfor %}
+{% endblock %}
